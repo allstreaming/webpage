@@ -1,3 +1,8 @@
+<?php
+session_start();
+//if ($_SESSION['islogin'] = true){
+if(isset($_SESSION['islogin'])){
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -28,3 +33,9 @@
     <br />
 </body>
 </html>
+<?php
+;exit;}
+else
+{ header("Location:index.html");exit;
+    }
+?>
