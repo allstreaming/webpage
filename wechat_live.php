@@ -1,6 +1,5 @@
 <?php
 session_start();
-//if ($_SESSION['islogin'] = true){
 if(isset($_SESSION['islogin'])){
 ?>
 <!DOCTYPE HTML>
