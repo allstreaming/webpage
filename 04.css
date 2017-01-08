@@ -1,0 +1,12 @@
+/* work with wechat_live_withcomments.html */
+#top{text-align:center}
+#head{width:auto;height:auto;margin:0 auto;}
+#head ul{padding:0;margin:0;}
+#head li{list-style:none;text-decoration:none;display:inline;padding:5px;margin:0px 20px 0px 0px;position:relative;}
+#head li a{text-decoration:none;color:red;}
+#head li a:visited{text-decoration:none;color:red;}
+#L1{font-size:15px;font-family:verdana;color:red;text-align:center;}
+#L2{font-size:15px;font-family:verdana;color:red;text-align:center;}
+/*#d1{background-color:#F5F5F5;border:1px;width:100%;padding-left:15px;padding-right:15px;height:auto;position:absolute;z-index:1;}*/
+#d1{background-color:#F5F5F5;border:1px;padding-left:15px;padding-right:15px;width:device-width;height:auto;}
+#d2{display:none;background-color:#F5F5F5;border:1px;padding-left:15px;padding-right:15px;width:device-width;height:auto;}
