@@ -3,5 +3,4 @@
 #!system=ios
 
 [Script]
-
-解锁91短视频VIP = type=http-response,pattern=^https?:\/\/.+\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5})?\/api.php$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/allstreaming/webpage/master/91.js
+解锁91短视频VIP = type=http-response,pattern=^https?:\/\/.+\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5})?\/api.php$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/91.js
