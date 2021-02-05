@@ -1,0 +1,10 @@
+#!name=微信跳转
+#!desc=该模块适用于解锁微信中第三方网站链接跳转的功能。
+#!system=ios
+
+[Script]
+#微信打不开的链接会进行跳转，包括抖音、淘宝等链接，甚至可扫描支付宝二维码
+微信跳转 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
+
+[MITM]
+hostname = weixin110.qq.com
