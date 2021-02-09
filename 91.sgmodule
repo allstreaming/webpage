@@ -1,6 +1,0 @@
-#!name=91短视频
-#!desc=该模块适用于解锁91短视频VIP功能.
-#!system=ios
-
-[Script]
-解锁91短视频VIP = type=http-response,pattern=^https?:\/\/.+\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5})?\/api.php$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/allstreaming/webpage/master/91.js
