@@ -1,0 +1,10 @@
+#!name=MiSports
+#!desc=Fake Step Numbers of MiSports
+#!system=iOS
+
+[MITM]
+hostname = account.huami.com
+
+[Script]
+Get Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login,requires-body=1,script-path=https://raw.githubusercontent.com/allstreaming/webpage/master/Surge/JS/xmSports.js
+Changing Numbers = type=cron,cronexp="15 19 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/allstreaming/webpage/master/Surge/JS/xmSports.js
