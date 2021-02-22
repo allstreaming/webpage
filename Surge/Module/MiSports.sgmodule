@@ -1,6 +1,6 @@
 #!name=MiSports
 #!desc=Fake Step Numbers of MiSports
-#!system=iOS
+#!system=ios
 
 [MITM]
 hostname = account.huami.com
