@@ -6,6 +6,6 @@
 hostname = sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com
 
 [Script]
-Rewrite: 顺丰速运 = type=http-request,pattern=^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-Rewrite: 顺丰速运 = type=http-request,pattern=^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-Tasks: 顺丰速运 = type=cron,cronexp="6 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
+GetToken = type=http-request,pattern=^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+GetToken = type=http-request,pattern=^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+Checkin = type=cron,cronexp="6 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
