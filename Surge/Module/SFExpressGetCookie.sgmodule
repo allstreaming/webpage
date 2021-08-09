@@ -1,0 +1,9 @@
+#!name=SF Express Get Cookie
+#!desc=Disable after get cookie
+#!system=ios
+
+[MITM]
+hostname = ccsp-egmas.sf-express.com
+
+[Script]
+Get Cookie = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
