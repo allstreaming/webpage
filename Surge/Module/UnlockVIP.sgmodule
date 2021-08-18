@@ -1,0 +1,16 @@
+#!name=Unlock VIP
+#!desc=This module unlock VIP of VSCO, PicsArt, MIX, Polarr and 91 APPs.
+
+[Script]
+http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+http-response https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js
+http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/MIX.js
+http-response ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
+http-response ^https?:\/\/.+?\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5}|)\/api.php$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/91.js
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+
+[MITM]
+hostname = vsco.co, api.revenuecat.com, api.picsart.c*, api.meiease.c*, bmall.camera360.com, api.polaxiong.com, mp.weixin.qq.com
+
+[General]
+force-http-engine-hosts = *91*:8080, *my10api*:8080
