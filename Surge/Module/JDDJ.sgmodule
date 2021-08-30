@@ -3,7 +3,7 @@
 #!system=ios
 
 [Script]
-http-request daojia.jd.com/html/index.html script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getck.js,tag=京东到家获取Cookie
+http-request ^https:\/\/daojia.jd.com\/html\/index.html script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getck.js,tag=京东到家获取Cookie
 cron "10 0,8,11,17 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit.js,tag=京东到家果园任务
 cron "5 */2 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit_collectWater.js,tag=到家果园收水滴
 cron "0 8 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_bean.js,tag=鲜豆任务
