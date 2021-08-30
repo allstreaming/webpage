@@ -3,13 +3,13 @@
 #!system=ios
 
 [Script]
-http-request ^https:\/\/daojia.jd.com\/html\/index.html script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getck.js,tag=京东到家获取Cookie
-cron "10 0,8,11,17 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit.js,tag=京东到家果园任务
-cron "5 */2 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit_collectWater.js,tag=到家果园收水滴
-cron "0 8 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_bean.js,tag=鲜豆任务
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_plantBeans.js,tag=鲜豆庄园
-cron "0-25/5 0 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getPoints.js,tag=鲜豆庄园领水滴1
-cron "26 5-20/5 * * *" https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getPoints.js, tag=鲜豆庄园领水滴2
+获取Cookie = type=http-request,pattern=^https:\/\/daojia.jd.com\/html\/index.html,requires-headers=1,script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getck.js
+京东到家果园任务 = type=cron,conexp="10 0,8,11,17 * * *",wake-system=1,timeout=360,script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit.js
+到家果园收水滴 = type=cron,conexp="5 */2 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit_collectWater.js
+鲜豆任务 = type=cron,conexp="0 8 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_bean.js
+鲜豆庄园 = type=cron,conexp="0 9 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_plantBeans.js
+鲜豆庄园领水滴1 = type=cron,conexp="0-25/5 0 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getPoints.js
+鲜豆庄园领水滴2 = type=cron,conexp="26 5-20/5 * * *" https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getPoints.js
 
 [MITM]
 hostname = %APPEND% daojia.jd.com
