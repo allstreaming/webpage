@@ -9,10 +9,10 @@ MIX = type=http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery,re
 Polarr = type=http-response ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
 91 = type=http-response ^https?:\/\/.+?\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5}|)\/api.php$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/91.js
 WeChat = type=http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
-Xmind = type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sky003-Max/surge-personal/master/Script/Unlock/Xmind.js,script-update-interval=0
+Xmind = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/sub),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/xmind.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% vsco.co,api.revenuecat.com,api.picsart.c*,api.meiease.c*,bmall.camera360.com,api.polaxiong.com,mp.weixin.qq.com,www.xmind.cn
+hostname = %APPEND% vsco.co,api.revenuecat.com,api.picsart.c*,api.meiease.c*,bmall.camera360.com,api.polaxiong.com,mp.weixin.qq.com,*.xmind.*
 
 [General]
 force-http-engine-hosts = *91*:8080,*my10api*:8080
