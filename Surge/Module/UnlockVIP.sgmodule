@@ -9,9 +9,10 @@ http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery requires-body
 http-response ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
 http-response ^https?:\/\/.+?\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5}|)\/api.php$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/91.js
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+Xmind = type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/sky003-Max/surge-personal/master/Script/Unlock/Xmind.js,script-update-interval=0
 
 [MITM]
-hostname = vsco.co, api.revenuecat.com, api.picsart.c*, api.meiease.c*, bmall.camera360.com, api.polaxiong.com, mp.weixin.qq.com
+hostname = %APPEND% vsco.co,api.revenuecat.com,api.picsart.c*,api.meiease.c*,bmall.camera360.com,api.polaxiong.com,mp.weixin.qq.com,www.xmind.cn
 
 [General]
-force-http-engine-hosts = *91*:8080, *my10api*:8080
+force-http-engine-hosts = *91*:8080,*my10api*:8080
