@@ -37,7 +37,7 @@ NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=aHR0cHM6Ly9kbGVyLmNsb3VkL3N1YnNjcmliZS91NW1GdFZuWmVrZWllMm5kP211PXNtYXJ0&reset_day=1&title=ExFlux&icon=opticaldisc&color=#5AC8FA
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fu5mFtVnZekeie2nd%3Fmu%3Dsmart&reset_day=1&title=ExFlux&icon=opticaldisc&color=#5AC8FA
 
 #disney+策略组控制
 #应当修改的字段 disneyGroup Disney+的策略组名称
