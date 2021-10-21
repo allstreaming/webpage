@@ -33,7 +33,7 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 
 #網路詳情 标题显示为根节点名
 #应当修改的字段 group 代理策略组名称
-NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/net_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=Master
+NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/net_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=Proxy
 
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
@@ -42,7 +42,7 @@ Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 #disney+策略组控制
 #应当修改的字段 disneyGroup Disney+的策略组名称
 #详情请阅读：https://github.com/fishingworld/something/tree/main/DisneySelect
-DisneySelecter = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disney_selecter.js, argument=icon1=checkmark.circle&color1=#55ba94&icon2=cursorarrow.click.badge.clock&color2=#ed6c84&icon3=xmark.shield&color3=#AF52DE&disneyGroup=Disney+
+DisneySelecter = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disney_selecter.js, argument=icon1=checkmark.circle&color1=#55ba94&icon2=cursorarrow.click.badge.clock&color2=#ed6c84&icon3=xmark.shield&color3=#AF52DE&disneyGroup=Disney
 DisneyChecker = type=cron,cronexp=35 4 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disney_checker.js,script-update-interval=86400,control-api=1
 
 #netflix策略组控制
@@ -53,4 +53,4 @@ NetflixChecker = type=cron,cronexp=5 4 * * *,wake-system=1,timeout=3600,script-p
 
 #策略组面板 可重复配置 注意修改相应字段
 #必须更改的字段：group 填写需要显示的策略组名称
-groupPanel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=network&color=#86abee&group=Master
+groupPanel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=network&color=#86abee&group=Proxy
