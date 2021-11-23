@@ -3,7 +3,7 @@
 
 
 [Panel]
-NetflixController = script-name=NetflixController, update-interval=600 
+NetflixController = script-name=NetflixController, title="Netflix",content="Netflix Nodes Selection", style=info, update-interval=600 
 
 [Script]
 #应该修改的字段 netflixGroup
