@@ -1,5 +1,5 @@
 #!name=信息面板
-#!desc=展示Netflix，Disney+，Youtube Premium解锁状态
+#!desc=用于展示Netflix，Disney+，Youtube Premuim解锁信息
 
 [Script]
 SurgePro_ReloadProfile = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_reloadprofile.js ,argument=icon=crown.fill&color=#f6c970
@@ -7,9 +7,9 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 
 net-info-panel = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/Panels/NetInfo/net-info-panel.js
 flushDNS = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon=arrow.clockwise&color=#3d3d5b
-nf_check = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Hyseen/Scripts/master/QuantumultX/NetflixPolicySwitcher/netflix_checker.js
+nf_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/b06e911a41036ebc36acf04ddebe7b9a/raw/nf_check.js
 ytb_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js
-disney_check = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Hyseen/Scripts/master/QuantumultX/DisneyPlusPolicySwitcher/disney_checker.js
+disney_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/729fc4c3ac28c3f2e7c4a832d81780f3/raw/disney_check.js
 
 [Panel]
 SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile, title="启动时长", content="请刷新", update-interval=1
