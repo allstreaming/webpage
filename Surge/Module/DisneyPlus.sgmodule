@@ -3,7 +3,7 @@
 
 
 [Panel]
-DisneyController = script-name=DisneyController, update-interval=600 
+DisneyController = script-name=DisneyController, title="Disney",content="Disney Nodes Selection", style=info, update-interval=600 
 
 [Script]
 #应该修改的字段 disneyGroup
