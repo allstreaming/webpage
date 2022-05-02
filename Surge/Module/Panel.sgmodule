@@ -7,7 +7,7 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 net-info-panel = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/Panels/NetInfo/net-info-panel.js
 flushDNS = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon=arrow.clockwise&color=#3d3d5b
 nf_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/b06e911a41036ebc36acf04ddebe7b9a/raw/nf_check.js
-#ytb_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js
+ytb_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js
 disney_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/729fc4c3ac28c3f2e7c4a832d81780f3/raw/disney_check.js
 
 [Panel]
@@ -16,5 +16,5 @@ TrafficStatistics = script-name=TrafficStatistics, title="流量统计", content
 net-info-panel = script-name=net-info-panel, title="网络状态", content="请刷新", style=info
 flushDNS = script-name=flushDNS, title="Flush DNS", content="请刷新", update-interval=600
 nf_check = script-name=nf_check, title="Netflix 解锁检测", content="请刷新", update-interval=10
-#ytb_check = script-name=ytb_check, title="YouTube Premium 解锁检测", update-interval=10
+ytb_check = script-name=ytb_check, title="YouTube Premium 解锁检测", update-interval=10
 disney_check = script-name=disney_check, title=Disney+ 解锁检测, content=请刷新, update-interval=10
