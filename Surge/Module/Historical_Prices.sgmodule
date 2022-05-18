@@ -1,14 +1,11 @@
 #!name=京东淘宝历史价格
-#!desc=在京东淘宝应用中显示该商品的历史价格
+#!desc=在京东淘宝手机应用中显示该商品的历史价格
 #!system=ios
 
-[MITM]
-hostname = %INSERT% api.m.jd.com,#trade-acs.m.taobao.com
-
 [Script]
-# > JD App 显示历史价格 by yichahucha
-jd_price.js = type=http-response,requires-body=1,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+淘宝比价 = type=http-response,requires-body=1,max-size=0,pattern=^http://.+/amdc/mobileDispatch,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+淘宝比价 = type=http-response,requires-body=1,max-size=0,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+京东比价 = type=http-response,requires-body=1,max-size=0,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 
-# > Taobao App 显示历史价格 by yichahucha
-tb_price.js = type=http-request,requires-body=1,pattern=^http:\/\/.+\/amdc\/mobileDispatch,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
-tb_price.js = type=http-response,requires-body=1,pattern=^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+[MITM]
+hostname = %INSERT% api.m.jd.com, trade-acs.m.taobao.com
