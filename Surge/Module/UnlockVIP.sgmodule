@@ -1,5 +1,6 @@
 #!name=Unlock VIP
 #!desc=This module unlock VIP of VSCO, PicsArt, MIX, Polarr, XMind, 91 APPs, Picsew and wps.
+#!system=ios
 
 [Script]
 VSCO = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
@@ -8,4 +9,4 @@ Xmind = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user
 PicsewPro = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
 
 [MITM]
-hostname = %APPEND% vsco.co,api.revenuecat.com,api.meiease.c*,*.xmind.*,buy.itunes.apple.com
+hostname = %APPEND% vsco.co,api.revenuecat.com,*.xmind.*,buy.itunes.apple.com
