@@ -1,5 +1,5 @@
 #!name=信息面板
-#!desc=用于展示网络信息，刷新DNS，以及Netflix，Disney+，Youtube Premuim解锁相关信息
+#!desc=用于展示网络信息，Netflix，Disney+和Youtube Premuim解锁情况
 #!system=ios
 
 [Script]
