@@ -3,7 +3,7 @@
 #!system=ios
 
 [Script]
-Premium = type=http-request,pattern=^https?:\/\/cn\.pornhubpremium\.com\/ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornHubPremiumCrack.js
+Premium = type=http-request,pattern=^https?:\/\/cn\.pornhubpremium\.com\/,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornHubPremiumCrack.js
 
 [MITM]
 hostname = %APPEND% cn.pornhubpremium.com
