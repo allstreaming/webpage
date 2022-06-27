@@ -1,0 +1,9 @@
+#!name=91短视频
+#!desc=91短视频解锁会员和金币视频
+#!system=ios
+
+[Script]
+http-response ^https?:\/\/.+\.(my10api|(.*91.*))\.\w{3,4}(:\d{2,5})?\/api.php$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/91SVCrack.js, requires-body=true
+
+[MITM]
+hostname = *.91api*
