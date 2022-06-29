@@ -1,5 +1,5 @@
-#!name=TikTok Unlock
-#!desc=Remove TikTok region lock
+#!name=TikTok
+#!desc=移除 TikTok 区域限制，重定向到美区，增加去水印下载功能
 
 [URL Rewrite]
 (?<=_region=)CN(?=&) US 307
