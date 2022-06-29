@@ -1,0 +1,9 @@
+#!name=PornHub Premium
+#!desc=Unlock Pornhub Premium Membership
+#!system=ios
+
+[Script]
+pornhub = type=http-request,pattern=^https?:\/\/cn\.pornhubpremium\.com\/,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornHubPremiumCrack.js
+
+[MITM]
+hostname = %APPEND% cn.pornhubpremium.com
