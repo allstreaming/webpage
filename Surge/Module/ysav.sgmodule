@@ -1,9 +1,0 @@
-#!name=悦色视频会员
-#!desc=悦色视频解锁会员，下载地址：https://shrtm.nu/ysav
-#!system=ios
-
-[Script]
-pornhub = type=http-request,pattern=^https?:\/\/ys\.huajibh\.com\/api\/video,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/PleasantVideoCrack.js
-
-[MITM]
-hostname = ys.huajibh.com
