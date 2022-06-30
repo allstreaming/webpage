@@ -1,0 +1,9 @@
+#!name=Deezer
+#!desc=解锁 Deezer HiFi 订阅
+#!system=ios
+
+[Script]
+Deezer = type=http-request,pattern=^https?:\/\/media\.deezer\.com\/v1\/get_url$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/DeezerHiFiProCrack.js,requires-body=true
+
+[MITM]
+hostname = media.deezer.com
