@@ -3,7 +3,7 @@
 #!system=ios
 
 [Script]
-Qobuz = type=http-request,pattern=^https?:\/\/www\.qobuz\.com\/api\.json\/0\.2\/user\/login$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/QobuzHiResProCrack.js,requires-body=true
+Qobuz = type=http-request,pattern=^https?:\/\/www\.qobuz\.com\/api\.json\/0\.2\/user\/login$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/QobuzHiResProCrack.js
 
 [MITM]
 hostname = www.qobuz.com
