@@ -1,0 +1,9 @@
+#!name=Audio Mack
+#!desc=解锁 AudioMack 永久订阅
+#!system=ios
+
+[Script]
+AudioMack = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/(identify|\d+)$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/AudioMackFProCrack.js,requires-body=true
+
+[MITM]
+hostname = api.revenuecat.com
