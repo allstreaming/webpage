@@ -3,7 +3,7 @@
 #!system=ios
 
 [Script]
-http-response ^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/boom.js, requires-body=true
+Boom = type=http-response,pattern=^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/boom.js, requires-body=true
 
 [MITM]
 hostname = apimboom2.globaldelight.net
