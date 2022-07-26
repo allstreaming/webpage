@@ -1,0 +1,10 @@
+#!name=Tun Only
+#!dec=Enable TUN mode only, force 80 port http proxy and enable MITM on TCP.
+#!system=ios
+
+[General]
+compatibility-mode = 3
+force-http-engine-hosts = %APPEND%
+
+[MITM]
+tcp-connection = true
