@@ -1,5 +1,5 @@
 #!name=Tun Only
-#!dec=Enable TUN mode only, force 80 port http proxy and enable MITM on TCP.
+#!desc=Enable TUN mode only, force 80 port http proxy and enable MITM on TCP.
 #!system=ios
 
 [General]
