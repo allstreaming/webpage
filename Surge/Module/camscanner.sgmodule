@@ -1,0 +1,9 @@
+#!name=全能扫描王
+#!desc=解锁全能扫描王高级账号功能
+#!system=ios
+
+[Script]
+CamScannerPro = type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/WSL33099/QuantumultX/main/jiaoben/camscanner.js
+
+[MITM]
+hostname = ap*.intsig.net
