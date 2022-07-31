@@ -1,9 +1,0 @@
-#!name=Termius
-#!desc=Unlock Termius VIP
-#!system=ios
-
-[Script]
-Termius = type=http-response,pattern=https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Terminus.js,requires-body=1,max-size=0,script-update-interval=0
-
-[MITM]
-hostname = api.termius.com
