@@ -1,0 +1,5 @@
+#!name=Paramount Plus Ruleset
+#!desc=Dedicated proxy list of Paramount Plus streaming service, set to Global TV rule.
+
+[Rule]
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ParamountPlus/ParamountPlus.list,Global TV
