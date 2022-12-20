@@ -1,0 +1,15 @@
+#!name=91Porn Video Crack
+#!desc=Unlock 91Porn Video VIP membership. 
+#!system=ios
+
+[Header Rewrite]
+^https?:\/\/.*\/m_sns\/(film|video|short_video)\/(film_detail|detail_list|apply_play) header-replace X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiIsImlhdCI6MTY3MDg0MTYwMSwiZXhwIjoxNjg2MzkzNjAxfQ.eyJpZCI6MTEyNDM1MTY0fQ.cDXTx14EaNf1TJzihOxOoIB4lyfwKnNNSrXbDiBj43kXzkzkqfftQRAqE23WTCuxQ45VYB-1IadrwxG_t3QoNA
+
+[URL Rewrite]
+^https?:\/\/.*\/(common\/splash_config|m_user\/(check_phone|behavior_verification_code)) - reject
+
+[Script]
+91PornVideoCrack = type=http-response,pattern=^https?:\/\/.*\/m_user\/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/91PornVideoCrack.js
+
+[MITM]
+hostname= %APPEND% app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, appapi.xmblgg.com, api.czbt.cc, api.jtshuzhiwa.com, appapi.17gwl.com, api.saiyijiaju.com, api.ddoukids.com, appapi.mnghx.info, appapi.zdxclr.com
