@@ -1,0 +1,9 @@
+#!name=QuantumultX Rewrite Convert to Surge Module
+#!desc=将QuantumultX的Rewrite文件转换成Surge模块，适用方法：先添加本模块，然后添加模块地址里将QuantumultX的Rewrite地址末尾添加qx后添加进去，模块会自动转换。
+#!system=ios
+
+[Script]
+QuantumultX转换 = type=http-request,pattern=qx$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/allstreaming/webpage/master/Surge/JS/qx2sg.js
+
+[MITM]
+hostname = %APPEND% github.com:443, raw.githubusercontent.com:443
