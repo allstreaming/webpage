@@ -1,9 +1,12 @@
-#!name=MD Font Unlock
-#!desc=Unlock MD Font Pro membership. 
+#!name=花样文字Pro
+#!desc=解锁花样文字Pro会员权限。 
 #!system=ios
 
-[Script]
-MDFontsProCrack = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),requires-body=0,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/MDFontsProCrack.js
+[Header Rewrite]
+^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-replace (\r\n)X-RevenueCat-ETag:.+(\r\n) $1$2
+
+[Map Local]
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} data="https://github.com/ddgksf2013/dev/raw/main/MDFontsProCrack.js"
 
 [MITM]
 hostname= %APPEND% api.revenuecat.com
