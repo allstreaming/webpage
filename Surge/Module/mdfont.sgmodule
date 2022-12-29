@@ -3,7 +3,7 @@
 #!system=ios
 
 [Header Rewrite]
-^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-replace (\r\n)X-RevenueCat-ETag:.+(\r\n) $1$2
+^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-replace X-RevenueCat-ETag: $2
 
 [Map Local]
 https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} data="https://github.com/ddgksf2013/dev/raw/main/MDFontsProCrack.js"
