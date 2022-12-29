@@ -3,8 +3,7 @@
 #!system=ios
 
 [Header Rewrite]
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-del X-RevenueCat-ETag
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-add X-RevenueCat-ETag
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-replace X-RevenueCat-ETag
 
 [Script]
 MDFontPro = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),requires-body=0,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/MDFontsProCrack.js
