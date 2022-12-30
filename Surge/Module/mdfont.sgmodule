@@ -3,7 +3,6 @@
 #!system=ios
 
 [Header Rewrite]
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-del X-RevenueCat-ETag
 http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-add X-RevenueCat-FTag 1
 
 [Script]
