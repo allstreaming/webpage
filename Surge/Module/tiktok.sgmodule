@@ -1,0 +1,13 @@
+#!name=TikTok美区解锁
+#!desc=在大陆地区解锁TikTok美区。需要先安装旧版21.1.0登陆后观看视频、直播、评论、点赞、发布视频等都正常使用后，再从App Store升级至最新版方可使用。
+#!system=ios
+
+[URL Rewrite]
+
+(?<=_region=)CN(?=&) US 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+
+[MITM]
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
