@@ -1,0 +1,5 @@
+#!name=Double Click
+#!desc=Reject Double Click domain.
+
+[URL Rewrite]
+^https?:\/\/pubads.g.doubleclick.net - reject

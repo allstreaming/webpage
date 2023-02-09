@@ -1,9 +1,0 @@
-#!name=美团
-#!desc=领外卖券，和一些可兑换现金到美团钱包的任务。
-
-[MITM]
-hostname = %APPEND% *.meituan.com
-
-[Script]
-meituan_rewrite = type=http-request,pattern=http://gaea.meituan.com/mop/entry/forbidden/resource,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/leafTheFish/DeathNote/main/meituan.js
-meituan_checkin = type=cron,cronexp=26 0,7-21/2 * * *,script-path=https://raw.githubusercontent.com/leafTheFish/DeathNote/main/meituan.js
