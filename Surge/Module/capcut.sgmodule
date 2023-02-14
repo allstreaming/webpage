@@ -4,7 +4,7 @@
 
 [Script]
 
-capcut = type=http-request,pattern=^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/gjwj666/qx/main/jianying.js
+capcut = type=http-request,pattern=^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/gjwj666/qx/main/jianying.js,script-update-interval=86400
 
 [MITM]
 hostname = %APPEND% *faceu*,*retouchpics*
