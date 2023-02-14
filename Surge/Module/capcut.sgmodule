@@ -1,0 +1,10 @@
+#!name=剪映VIP
+#!desc=开启剪映VIP滤镜，特效，闪图，模版等，不限时VIP但可以直接使用VIP效果。
+#!system=ios
+
+[Script]
+
+capcut = type=http-request,pattern=^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/gjwj666/qx/main/jianying.js
+
+[MITM]
+hostname = %APPEND% *faceu*,*retouchpics*
