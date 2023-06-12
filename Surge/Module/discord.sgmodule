@@ -1,0 +1,5 @@
+#!name=Discord Ruleset
+#!desc=Set Discord traffic to proxy.
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list,Proxy
