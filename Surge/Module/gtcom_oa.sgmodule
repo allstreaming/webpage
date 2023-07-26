@@ -1,0 +1,11 @@
+#!name= OA系统DNS映射
+#!desc= 指定办公OA地址使用内网DNS
+#!author= Ethan Wang
+#!homepage= https://github.com/allstreaming/webpage/new/master/Surge/Module
+#!icon=
+#!update= 2023.07.26
+
+[Host]
+# 本地DNS映射
+# 腾讯
+oa.gtcom.com.cn = server:system
