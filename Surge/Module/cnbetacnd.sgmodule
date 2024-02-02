@@ -1,0 +1,5 @@
+#!name=CnBeta CDN Ruleset
+#!desc=Dedicated proxy list of CnBeta CDN service to porxy.
+
+[Rule]
+DOMAIN-SUFFIX,cnbetacdn.com,Proxy
