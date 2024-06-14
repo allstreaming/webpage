@@ -3,4 +3,4 @@
 #!system=iOS
 
 [MITM]
-hostname = -api*.tiktokv.com
+hostname = %INSERT% -api*.tiktokv.com
