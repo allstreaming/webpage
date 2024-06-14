@@ -1,6 +1,6 @@
 #!name=Tiktok UnMitM
 #!desc=Remove Tiktok domain name from MitM list
-#!system=iOS
+#!system=ios
 
 [MITM]
 hostname = %INSERT% -api*.tiktokv.com
