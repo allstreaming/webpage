@@ -1,6 +1,7 @@
 #!name=Volvo World Checkin
 #!desc=沃尔沃汽车APP签到
 #!system=ios
+#!category=定时任务
 
 [Script]
 Volvo = type=http-response,pattern=^https:\/\/apigateway\.digitalvolvo\.com\/app/iam\/api\/v\d\/(auth$|refreshToken=),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/volvo.js,script-update-interval=0
