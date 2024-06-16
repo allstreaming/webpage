@@ -1,5 +1,5 @@
 #!name=Volvo World Checkin
-#!desc=沃尔沃汽车APP签到
+#!desc=沃尔沃汽车APP签到。Token获取：长时间不进入APP，有机会触发获取到Token,这个不是脚本问题。或者退出重新登录，立马可以获取到Token。
 #!system=ios
 #!category=定时任务
 
