@@ -1,0 +1,21 @@
+#!name=百度网盘去广告
+#!desc=去百度网盘开屏广告，广告推广，启动弹窗等。
+#!system=ios
+
+[Script]
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
+http-response ^https?:\/\/afd\.baidu\.com\/afd\/entry script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
+http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
+http-response ^https:\/\/pan\.baidu\.com\/feed\/cardinfos script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
+
+[URL Rewrite]
+^https?:\/\/afd\.baidu\.com\/rest\/.*\/membership\/proxy\/guide - reject
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list - reject
+^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad - reject
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
+^https:\/\/pan\.baidu\.com\/feed\/hotlist - reject
+^https:\/\/pan\.baidu\.com\/queryintent\/queryhint - reject
+^https:\/\/pan\.baidu\.com\/coins\/center\/notice - reject
+
+[MITM]
+hostname = %APPEND% pan.baidu.com, afd.baidu.com
