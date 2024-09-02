@@ -1,0 +1,14 @@
+#!name=中国移动去广告
+#!desc=去除中国移动肉眼可见广告
+#!system=ios
+
+[Script]
+启动页 = type=http-response,pattern=^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js,script-update-interval=0
+首页下拉 = type=http-response,pattern=^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/newTopPullSecond\/getNewTopPullList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js,script-update-interval=0
+首页悬浮1 = type=http-response,pattern=^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/emotionMarket\/getEmotionMarketNew,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js,script-update-interval=0
+首页悬浮2 = type=http-response,pattern=^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/homeArea\/getTopAreaList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js,script-update-interval=0
+办理横幅 = type=http-response,pattern=^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/navigation\/getNavigationNewInfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js,script-update-interval=0
+我的弹窗 = type=http-response,pattern=^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/friendShake\/getShakeList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND%  client.app.coc.10086.cn, h.app.coc.10086.cn
