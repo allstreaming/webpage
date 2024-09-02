@@ -1,5 +1,6 @@
 #!name=百度网盘去广告
 #!desc=去百度网盘开屏广告，广告推广，启动弹窗等。
+#!category=去广告
 #!system=ios
 
 [Script]
