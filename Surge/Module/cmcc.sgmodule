@@ -1,5 +1,6 @@
 #!name=中国移动去广告
 #!desc=去除中国移动肉眼可见广告
+#!category=去广告
 #!system=ios
 
 [Script]
