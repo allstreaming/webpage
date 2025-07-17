@@ -1,0 +1,5 @@
+#!name=DMM Ruleset
+#!desc=Dedicated proxy of DMM, set to Japanese line.
+
+[Rule]
+RULE-SET,https://testingcf.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Media/DMM.list,🇯🇵 日本 IEPL [02] [Air]
