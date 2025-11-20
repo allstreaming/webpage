@@ -1,0 +1,7 @@
+#!name=Direct hk.sexemby
+#!desc=Bypass proxy for hk.sexemby.com:80
+
+[Rule]
+# Match domain EXACTLY
+DOMAIN, hk.sexemby.com, DIRECT
+DOMAIN, jp4837.direct.sexemby.com, DIRECT
