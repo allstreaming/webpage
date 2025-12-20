@@ -1,0 +1,18 @@
+#!name=开启 TUN 模式
+#!desc=强制启用 Surge 的 TUN 虚拟网卡引擎，接管系统所有三层网络流量。
+#!category=网络设置
+
+[General]
+# 启用 TUN 接口引擎 (Surge iOS 默认开启，macOS 下对应增强模式)
+compatibility-mode = 0
+
+# 指定 TUN 虚拟网卡的运行模式，通常设为 3 (Surge 强力推荐值)
+tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+tun-included-routes = 0.0.0.0/0
+
+# 开启 DNS 接管，这是 TUN 模式正常工作的核心
+dns-server = 119.29.29.29, 223.5.5.5
+system-dns-override = true
+
+[Script]
+# 某些环境下可能需要通过脚本强制检查状态（可选）
