@@ -1,0 +1,14 @@
+#!name=开启 IPv6 支持
+#!desc=启用 Surge 的 IPv6 接管功能，并允许 DNS 请求 AAAA 记录。
+#!category=网络设置
+
+[General]
+# 让 Surge 监听 IPv6 地址并处理 IPv6 流量
+ipv6 = true
+
+# 允许 DNS 解析 AAAA 记录（获取 IPv6 地址）
+ipv6-vif = auto
+
+[MITM]
+# 如果需要对 IPv6 流量进行解密，建议保持此项开启
+tcp-connection = true
