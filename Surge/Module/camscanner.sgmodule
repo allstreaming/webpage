@@ -1,9 +1,10 @@
-#!name=全能扫描王
-#!desc=解锁全能扫描王高级账号功能
-#!system=ios
-
-[Script]
-CamScannerPro = type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://github.com/ddgksf/Scripts/raw/dev/CamscannerProCrack.js
+#!name=扫描全能王 (CamScanner) 解锁插件
+#!desc=解锁 SVIP 功能及有效期至 2099 年。
+#!category=脚本重写
 
 [MITM]
-hostname = %APPEND% ap*.intsig.net
+hostname = %APPEND% api*.intsig.net
+
+[Script]
+# 匹配 query_property 接口进行数据重写
+扫描全能王解锁 = type=http-response,pattern=https:\/\/(api|api-cs)-cn\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://github.com/allstreaming/webpage/raw/refs/heads/master/Surge/JS/camscanner.js
