@@ -2,4 +2,4 @@
 #!desc=Dedicated proxy of DMM, set to Japanese line.
 
 [Rule]
-RULE-SET,https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Media/DMM.list,🇯🇵 日本 Fusion 03
+RULE-SET,https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Media/DMM.list,🇯🇵 日本 Fusion 08
