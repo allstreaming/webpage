@@ -1,5 +1,6 @@
 #!name=DMM & FANZA Japanese Line
 #!desc=Route DMM and FANZA traffic through an existing Japanese policy group.
+#!category=Rule Sets
 #!arguments=Target-Policy:Proxy
 #!arguments-desc=Target-Policy: 🇯🇵 日本 Fusion 08
 
