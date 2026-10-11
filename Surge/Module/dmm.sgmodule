@@ -1,28 +1,25 @@
-#!name=DMM & FANZA Smart Japanese Line
-#!desc=Injects a Smart policy group filtering "🇯🇵 日本 Fusion" nodes and routes DMM/FANZA traffic through it.
-#!category=Streaming
-
-[Proxy Group]
-# 智能策略组：自动收录 01~08 节点，基于连接成功率与实时延迟自适应决策最佳线路
-DMM = smart, policy-regex-filter=日本 Fusion, no-alert=0, hidden=0
+#!name=DMM & FANZA Japanese Line
+#!desc=Route DMM and FANZA traffic through an existing Japanese policy group.
+#!arguments=Target-Policy:Proxy
+#!arguments-desc=Target-Policy: 🇯🇵 日本 Fusion 08
 
 [Rule]
 # === DMM 域名体系 ===
-DOMAIN-SUFFIX,dmm.com,DMM
-DOMAIN-SUFFIX,dmm.co.jp,DMM
-DOMAIN-SUFFIX,dmm-extension.com,DMM
+DOMAIN-SUFFIX,dmm.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,dmm.co.jp,{{{Target-Policy}}}
+DOMAIN-SUFFIX,dmm-extension.com,{{{Target-Policy}}}
 
 # === FANZA 域名体系 ===
-DOMAIN-SUFFIX,fanza.jp,DMM
-DOMAIN-SUFFIX,fanza.com,DMM
-DOMAIN-SUFFIX,dmm.fanza.com,DMM
+DOMAIN-SUFFIX,fanza.jp,{{{Target-Policy}}}
+DOMAIN-SUFFIX,fanza.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,dmm.fanza.com,{{{Target-Policy}}}
 
-# === 视频播放、流媒体鉴权及 CDN 服务 ===
-DOMAIN-SUFFIX,img.vm-movie.jp,DMM
-DOMAIN-SUFFIX,p-smith.com,DMM
-DOMAIN-SUFFIX,videomarket.jp,DMM
-DOMAIN-SUFFIX,vmdash-cenc.akamaized.net,DMM
+# === 视频播放、鉴权及 CDN 服务 ===
+DOMAIN-SUFFIX,img.vm-movie.jp,{{{Target-Policy}}}
+DOMAIN-SUFFIX,p-smith.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,videomarket.jp,{{{Target-Policy}}}
+DOMAIN-SUFFIX,vmdash-cenc.akamaized.net,{{{Target-Policy}}}
 
 # === 关键词兜底匹配 ===
-DOMAIN-KEYWORD,dmm,DMM
-DOMAIN-KEYWORD,fanza,DMM
+DOMAIN-KEYWORD,dmm,{{{Target-Policy}}}
+DOMAIN-KEYWORD,fanza,{{{Target-Policy}}}
