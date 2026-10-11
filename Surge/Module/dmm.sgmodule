@@ -1,5 +1,28 @@
-#!name=DMM Ruleset
-#!desc=Dedicated proxy of DMM, set to Japanese line.
+#!name=DMM & FANZA Smart Japanese Line
+#!desc=Injects a Smart policy group filtering "🇯🇵 日本 Fusion" nodes and routes DMM/FANZA traffic through it.
+#!category=Streaming
+
+[Proxy Group]
+# 智能策略组：自动收录 01~08 节点，基于连接成功率与实时延迟自适应决策最佳线路
+DMM = smart, policy-regex-filter=日本 Fusion, no-alert=0, hidden=0
 
 [Rule]
-RULE-SET,https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Media/DMM.list,🇯🇵 日本 Fusion 08
+# === DMM 域名体系 ===
+DOMAIN-SUFFIX,dmm.com,DMM
+DOMAIN-SUFFIX,dmm.co.jp,DMM
+DOMAIN-SUFFIX,dmm-extension.com,DMM
+
+# === FANZA 域名体系 ===
+DOMAIN-SUFFIX,fanza.jp,DMM
+DOMAIN-SUFFIX,fanza.com,DMM
+DOMAIN-SUFFIX,dmm.fanza.com,DMM
+
+# === 视频播放、流媒体鉴权及 CDN 服务 ===
+DOMAIN-SUFFIX,img.vm-movie.jp,DMM
+DOMAIN-SUFFIX,p-smith.com,DMM
+DOMAIN-SUFFIX,videomarket.jp,DMM
+DOMAIN-SUFFIX,vmdash-cenc.akamaized.net,DMM
+
+# === 关键词兜底匹配 ===
+DOMAIN-KEYWORD,dmm,DMM
+DOMAIN-KEYWORD,fanza,DMM
