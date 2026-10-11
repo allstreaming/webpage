@@ -1,18 +1,26 @@
 #!name=DMM & FANZA Japanese Line
 #!desc=Route DMM and FANZA traffic through custom Japanese node.
+#!category=Rule-Sets
 #!arguments=Target-Policy:🇯🇵 日本 Fusion 08
 #!arguments-desc=Target-Policy: 请确认输入你想走的日本节点全称
 
 [Rule]
+# === DMM 域名体系 ===
 DOMAIN-SUFFIX,dmm.com,{{{Target-Policy}}}
 DOMAIN-SUFFIX,dmm.co.jp,{{{Target-Policy}}}
 DOMAIN-SUFFIX,dmm-extension.com,{{{Target-Policy}}}
+
+# === FANZA 域名体系 ===
 DOMAIN-SUFFIX,fanza.jp,{{{Target-Policy}}}
 DOMAIN-SUFFIX,fanza.com,{{{Target-Policy}}}
 DOMAIN-SUFFIX,dmm.fanza.com,{{{Target-Policy}}}
+
+# === 视频播放、鉴权及 CDN 服务 ===
 DOMAIN-SUFFIX,img.vm-movie.jp,{{{Target-Policy}}}
 DOMAIN-SUFFIX,p-smith.com,{{{Target-Policy}}}
 DOMAIN-SUFFIX,videomarket.jp,{{{Target-Policy}}}
 DOMAIN-SUFFIX,vmdash-cenc.akamaized.net,{{{Target-Policy}}}
+
+# === 关键词兜底匹配 ===
 DOMAIN-KEYWORD,dmm,{{{Target-Policy}}}
 DOMAIN-KEYWORD,fanza,{{{Target-Policy}}}
