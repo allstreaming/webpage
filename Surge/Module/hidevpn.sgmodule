@@ -1,0 +1,5 @@
+#!name=Hide VPN Icon
+#!desc=隐藏 iOS 状态栏 VPN 图标
+
+[General]
+hide-vpn-icon = true
