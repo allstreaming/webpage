@@ -1,0 +1,15 @@
+#!name=Spotify 策略控制
+#!desc=引入 Spotify 远程规则集（启用 extended-matching），并创建可手动切换的专属策略组（默认直连，可备选其他策略）
+#!category=Streaming
+
+[Proxy Group]
+# 创建 Spotify 手动切换策略组，默认 DIRECT（直连），备选主配置中的代理策略（如 Proxy）
+Spotify = select, DIRECT, Proxy
+
+[Rule]
+# 将规则集流量指向 Spotify 策略组
+RULE-SET,Spotify,Spotify
+
+[Rule Set]
+# 引用远程规则集：24小时自动更新，并显式启用前缀树/通配符/网段匹配
+Spotify = url, https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Media/Spotify.list, interval=86400, extended-matching=true
