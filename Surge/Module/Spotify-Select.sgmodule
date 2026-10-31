@@ -1,5 +1,6 @@
 #!name=Spotify 直连控制
 #!desc=引入 Spotify 远程规则集并直接走直连
+#!category=Rule-Sets
 
 [Rule]
 RULE-SET,Spotify,DIRECT
