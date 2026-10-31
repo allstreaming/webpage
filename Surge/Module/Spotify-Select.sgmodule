@@ -1,9 +1,39 @@
-#!name=Spotify 直连控制
-#!desc=引入 Spotify 远程规则集并直接走直连
+#!name=Spotify 规则控制
+#!desc=将 Spotify 流量导向指定策略。支持参数化配置节点或策略组名称（默认 DIRECT 直连）。
 #!category=Rule-Sets
+#!arguments=Target-Policy:DIRECT
+#!arguments-desc=Target-Policy: 请输入你想走的节点或策略组全称（默认 DIRECT 直连，可选填你常用的代理组名称如 Proxy）
 
 [Rule]
-RULE-SET,Spotify,DIRECT
+# === 客户端进程 / User-Agent 匹配 ===
+USER-AGENT,Spotify*,{{{Target-Policy}}}
 
-[Rule Set]
-Spotify = url, https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Media/Spotify.list, interval=86400, extended-matching=true
+# === 专用域名 (精确匹配) ===
+DOMAIN,audio-ak-spotify-com.akamaized.net,{{{Target-Policy}}}
+DOMAIN,audio4-ak-spotify-com.akamaized.net,{{{Target-Policy}}}
+DOMAIN,cdn-spotify-experiments.conductrics.com,{{{Target-Policy}}}
+DOMAIN,heads-ak-spotify-com.akamaized.net,{{{Target-Policy}}}
+DOMAIN,heads4-ak-spotify-com.akamaized.net,{{{Target-Policy}}}
+DOMAIN,spotify.com.edgesuite.net,{{{Target-Policy}}}
+DOMAIN,spotify.map.fastly.net,{{{Target-Policy}}}
+DOMAIN,spotify.map.fastlylb.net,{{{Target-Policy}}}
+
+# === 核心域名及 CDN 体系 (后缀匹配) ===
+DOMAIN-SUFFIX,byspotify.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,lifeatspotify.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,pscdn.co,{{{Target-Policy}}}
+DOMAIN-SUFFIX,scdn.co,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spoti.fi,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotify-everywhere.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotify.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotify.design,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotify.link,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotifycdn.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotifycdn.net,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotifycharts.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotifycodes.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotifyforbrands.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotifyforvendors.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotifyjobs.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,spotilocal.com,{{{Target-Policy}}}
+DOMAIN-SUFFIX,tospotify.com,{{{Target-Policy}}}
