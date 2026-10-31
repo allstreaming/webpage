@@ -1,6 +1,6 @@
-#!name=UHDNow Direct Rule
-#!desc=将 uhdnow.com 后缀的所有域名强制走 DIRECT 直连规则。
-#!category=Rules
+#!name=UHDNow 规则控制
+#!desc=将 uhdnow.com 的流量导向指定策略(默认直链)。
+#!category=Rule-Sets
 
 [Rule]
 DOMAIN-SUFFIX,uhdnow.com,DIRECT
