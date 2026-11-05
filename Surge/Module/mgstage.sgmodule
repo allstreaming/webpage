@@ -1,7 +1,7 @@
 #!name=MGStage 规则控制
 #!desc=将 MGStage 流量导向指定策略。支持参数化配置节点或策略组名称。
 #!category=Rule-Sets
-#!arguments=Target-Policy:[A]JP PrivateNET 03
+#!arguments=Target-Policy:日本 Fusion 08
 #!arguments-desc=Target-Policy: 请输入你想走的节点或策略组全称（如日本节点名称或代理策略组）
 
 [Rule]
