@@ -1,0 +1,30 @@
+# === MGStage 官方主站及子域名体系 ===
+2, mgstage.com
+2, mgs-tv.com
+2, mgs-video.com
+
+# === MGStage 静态资源与图片 CDN ===
+2, ccdn.mgstage.com
+
+# === MGStage 关键词匹配 ===
+3, mgstage
+
+# === DMM 域名体系 ===
+2, dmm.com
+2, dmm.co.jp
+2, dmm-extension.com
+
+# === FANZA 域名体系 ===
+2, fanza.jp
+2, fanza.com
+2, dmm.fanza.com
+
+# === 视频播放、鉴权及 CDN 服务 ===
+2, img.vm-movie.jp
+2, p-smith.com
+2, videomarket.jp
+2, vmdash-cenc.akamaized.net
+
+# === DMM / FANZA 关键词匹配 ===
+3, dmm
+3, fanza
