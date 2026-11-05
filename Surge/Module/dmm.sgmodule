@@ -1,7 +1,7 @@
 #!name=DMM & FANZA 规则控制
 #!desc=将 DMM 和 FANZA的流量导向指定策略。支持参数化配置节点或策略组名称。
 #!category=Rule-Sets
-#!arguments=Target-Policy:[A]JP PrivateNET 03
+#!arguments=Target-Policy:日本 Fusion 08
 #!arguments-desc=Target-Policy: 请确认输入你想走的日本节点全称
 
 [Rule]
